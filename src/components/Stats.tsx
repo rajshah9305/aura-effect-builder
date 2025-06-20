@@ -15,7 +15,7 @@ const Stats = () => {
       label: 'Premium Projects Delivered', 
       sublabel: 'Sophisticated digital experiences',
       gradient: 'from-mono-600 to-mono-800',
-      bgGradient: 'from-mono-50 to-mono-100'
+      bgGradient: 'from-mono-50 to-white'
     },
     { 
       icon: Users,
@@ -24,7 +24,7 @@ const Stats = () => {
       label: 'Client Satisfaction Rate', 
       sublabel: 'Exceptional service delivery',
       gradient: 'from-mono-700 to-mono-900',
-      bgGradient: 'from-mono-100 to-mono-200'
+      bgGradient: 'from-white to-mono-50'
     },
     { 
       icon: Zap,
@@ -33,7 +33,7 @@ const Stats = () => {
       label: 'Performance Enhancement', 
       sublabel: 'Faster than industry standard',
       gradient: 'from-mono-800 to-mono-600',
-      bgGradient: 'from-mono-50 to-mono-150'
+      bgGradient: 'from-mono-50 to-mono-100'
     },
     { 
       icon: Globe,
@@ -42,7 +42,7 @@ const Stats = () => {
       label: 'Global Markets Served', 
       sublabel: 'Worldwide digital presence',
       gradient: 'from-mono-600 to-mono-800',
-      bgGradient: 'from-mono-100 to-mono-200'
+      bgGradient: 'from-white to-mono-50'
     }
   ];
 
@@ -63,7 +63,7 @@ const Stats = () => {
     return () => observer.disconnect();
   }, []);
 
-  const SophisticatedCounter = ({ end, suffix, delay }: { end: number; suffix: string; delay: number }) => {
+  const CleanCounter = ({ end, suffix, delay }: { end: number; suffix: string; delay: number }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -91,31 +91,31 @@ const Stats = () => {
     }, [isVisible, end, delay]);
 
     return (
-      <span className="mono-text font-bold text-5xl md:text-6xl">
+      <span className="contrast-text font-bold text-5xl md:text-6xl">
         {suffix === '%' ? count.toFixed(1) : count}{suffix}
       </span>
     );
   };
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 relative overflow-hidden texture">
-      {/* Sophisticated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-surface-cream via-mono-50/20 to-mono-100/20" />
-      <div className="absolute inset-0 bg-mono-mesh bg-[length:200px_200px] opacity-15 animate-gradient-sweep" />
+    <section ref={sectionRef} className="py-24 px-6 relative overflow-hidden bg-surface-white clean-texture">
+      {/* Clean Professional Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-surface-cream via-mono-50/10 to-mono-100/10" />
+      <div className="absolute inset-0 bg-subtle-pattern bg-[length:200px_200px] opacity-8 animate-shine-sweep" />
       
-      {/* Morphic Background Elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-mono-200/15 to-mono-300/10 rounded-full blur-3xl animate-morphic-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-bl from-mono-300/10 to-mono-400/5 rounded-full blur-3xl animate-morphic-float" style={{ animationDelay: '-4s' }} />
+      {/* Clean Background Elements */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-mono-100/10 to-mono-200/8 rounded-full blur-3xl animate-float-clean" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-bl from-mono-200/8 to-mono-300/5 rounded-full blur-3xl animate-float-clean" style={{animationDelay: '-4s'}} />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <Badge className="mono-glass border-mono-300/50 text-mono-800 mb-8 px-6 py-3">
+          <Badge className="clean-glass border-mono-200/50 text-mono-800 mb-8 px-6 py-3 shadow-sm">
             <TrendingUp className="w-4 h-4 mr-2" />
             Performance Metrics
           </Badge>
           <h2 className="text-5xl md:text-7xl font-bold text-mono-900 mb-8 leading-tight">
-            Results That <span className="mono-text">Matter</span>
+            Results That <span className="contrast-text">Matter</span>
           </h2>
           <p className="text-xl text-mono-600 max-w-3xl mx-auto leading-relaxed">
             Our sophisticated approach delivers measurable results that exceed expectations, 
@@ -131,16 +131,16 @@ const Stats = () => {
               className="text-center group relative"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="mono-glass rounded-3xl p-8 levitate mono-glow transition-all duration-500 group-hover:scale-105 relative overflow-hidden">
+              <div className="clean-glass rounded-3xl p-8 clean-levitate pro-glow transition-all duration-500 group-hover:scale-105 relative overflow-hidden shadow-sm hover:shadow-lg">
                 {/* Icon Container */}
-                <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-r ${stat.bgGradient} rounded-2xl flex items-center justify-center group-hover:animate-mono-pulse transition-all duration-500 relative`}>
+                <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-r ${stat.bgGradient} rounded-2xl flex items-center justify-center group-hover:animate-bright-pulse transition-all duration-500 relative shadow-sm`}>
                   <stat.icon className={`w-10 h-10 text-transparent bg-gradient-to-r ${stat.gradient} bg-clip-text`} />
-                  <div className="absolute inset-0 gradient-lines opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 shine-lines opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                {/* Sophisticated Counter */}
+                {/* Professional Counter */}
                 <div className="mb-4">
-                  <SophisticatedCounter 
+                  <CleanCounter 
                     end={stat.number} 
                     suffix={stat.suffix} 
                     delay={index * 300}
@@ -148,7 +148,7 @@ const Stats = () => {
                 </div>
 
                 {/* Labels */}
-                <h3 className="text-xl font-bold text-mono-900 mb-2 group-hover:mono-text transition-all duration-500">
+                <h3 className="text-xl font-bold text-mono-900 mb-2 group-hover:contrast-text transition-all duration-500">
                   {stat.label}
                 </h3>
                 
@@ -156,14 +156,14 @@ const Stats = () => {
                   {stat.sublabel}
                 </p>
                 
-                {/* Sophisticated Indicator */}
+                {/* Professional Indicator */}
                 <div className={`h-1 w-20 mx-auto mt-4 bg-gradient-to-r ${stat.gradient} rounded-full opacity-60 group-hover:opacity-100 group-hover:w-24 transition-all duration-500`} />
 
                 {/* Hover Effect Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-2 transition-opacity duration-500 rounded-3xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-1 transition-opacity duration-500 rounded-3xl`} />
                 
                 {/* Subtle Corner Detail */}
-                <div className="absolute top-4 right-4 w-8 h-8 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                <div className="absolute top-4 right-4 w-8 h-8 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                   <div className={`w-full h-full bg-gradient-to-bl ${stat.gradient} rounded-full animate-pulse`} />
                 </div>
               </div>
@@ -171,15 +171,15 @@ const Stats = () => {
           ))}
         </div>
 
-        {/* Sophisticated Call-to-Action */}
+        {/* Professional Call-to-Action */}
         <div className="text-center mt-20">
-          <div className="mono-glass rounded-3xl p-10 max-w-4xl mx-auto relative overflow-hidden">
+          <div className="clean-glass rounded-3xl p-10 max-w-4xl mx-auto relative overflow-hidden shadow-sm">
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-mono-mesh bg-[length:50px_50px] opacity-5" />
+            <div className="absolute inset-0 bg-subtle-pattern bg-[length:50px_50px] opacity-3" />
             
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-mono-900 mb-4">
-                Ready to achieve <span className="mono-text">exceptional results</span>?
+                Ready to achieve <span className="contrast-text">exceptional results</span>?
               </h3>
               <p className="text-mono-600 text-lg mb-8 max-w-2xl mx-auto">
                 These metrics represent our commitment to excellence. Let's create something 
