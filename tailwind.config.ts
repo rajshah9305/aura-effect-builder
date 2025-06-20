@@ -116,6 +116,10 @@ export default {
 					700: 'hsl(210, 6%, 25%)',
 					800: 'hsl(var(--void-gray-light))',
 					900: 'hsl(var(--void-gray))',
+				},
+				surface: {
+					white: 'hsl(var(--surface-white))',
+					cream: 'hsl(var(--surface-cream))',
 				}
 			},
 			borderRadius: {
