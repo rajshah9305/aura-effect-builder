@@ -3,87 +3,91 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Revolutionary Design System - Digital Mind Studio */
 
 @layer base {
   :root {
-    --background: 220 13% 91%;
-    --foreground: 220 9% 4%;
+    --background: 210 11% 96%;
+    --foreground: 210 6% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 9% 4%;
+    --card-foreground: 210 6% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 9% 4%;
+    --popover-foreground: 210 6% 8%;
 
-    --primary: 220 9% 4%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 6% 8%;
+    --primary-foreground: 210 11% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 220 9% 4%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 6% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 220 9% 4%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 210 6% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 11% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 220 9% 4%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 6% 8%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Revolutionary Color Palette */
+    --quantum-blue: 199 89% 48%;
+    --quantum-blue-light: 199 89% 65%;
+    --quantum-blue-dark: 199 89% 35%;
+    
+    --cyber-teal: 174 72% 56%;
+    --cyber-teal-light: 174 72% 70%;
+    --cyber-teal-dark: 174 72% 42%;
+    
+    --neural-orange: 24 95% 53%;
+    --neural-orange-light: 24 95% 67%;
+    --neural-orange-dark: 24 95% 39%;
+    
+    --matrix-green: 142 76% 36%;
+    --matrix-green-light: 142 76% 50%;
+    --matrix-green-dark: 142 76% 22%;
+    
+    --void-gray: 210 6% 8%;
+    --void-gray-light: 210 6% 15%;
+    --surface-white: 0 0% 98%;
+    --surface-cream: 45 25% 97%;
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: 210 6% 8%;
+    --foreground: 210 11% 96%;
 
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
+    --card: 210 6% 8%;
+    --card-foreground: 210 11% 96%;
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 213 31% 91%;
+    --popover: 210 6% 8%;
+    --popover-foreground: 210 11% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
+    --primary: 210 11% 96%;
+    --primary-foreground: 210 6% 8%;
 
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 6% 15%;
+    --secondary-foreground: 210 11% 96%;
 
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    --muted: 210 6% 15%;
+    --muted-foreground: 217 11% 65%;
 
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 6% 15%;
+    --accent-foreground: 210 11% 96%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 11% 96%;
 
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
-
-    --sidebar-background: 224 71% 4%;
-    --sidebar-foreground: 213 31% 91%;
-    --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 220.9 39.3% 11%;
-    --sidebar-accent: 215 27.9% 16.9%;
-    --sidebar-accent-foreground: 213 31% 91%;
-    --sidebar-border: 215 27.9% 16.9%;
-    --sidebar-ring: 216 12.2% 83.9%;
+    --border: 210 6% 15%;
+    --input: 210 6% 15%;
+    --ring: 210 11% 84%;
   }
 }
 
@@ -93,55 +97,219 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(224 71% 6%) 100%);
+    @apply bg-surface-white text-foreground font-sans;
+    background: 
+      radial-gradient(circle at 20% 50%, hsl(var(--quantum-blue))/0.03 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--cyber-teal))/0.02 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(var(--neural-orange))/0.02 0%, transparent 50%),
+      linear-gradient(135deg, hsl(var(--surface-white)) 0%, hsl(var(--surface-cream)) 100%);
     min-height: 100vh;
   }
 
   html {
-    @apply dark;
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  .glass-effect {
-    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  /* Revolutionary Glass Morphism */
+  .neo-glass {
+    @apply backdrop-blur-xl bg-white/60 border border-white/30;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 0 0 1px rgba(255, 255, 255, 0.2);
   }
   
-  .glow-effect {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  /* Quantum Glow Effects */
+  .quantum-glow {
+    position: relative;
   }
   
-  .text-gradient {
-    @apply bg-gradient-to-r from-electric-500 via-neon-400 to-electric-600 bg-clip-text text-transparent;
+  .quantum-glow::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, 
+      hsl(var(--quantum-blue)), 
+      hsl(var(--cyber-teal)), 
+      hsl(var(--neural-orange))
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
-  .hover-lift {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  .quantum-glow:hover::before {
+    opacity: 1;
+  }
+  
+  /* Neural Network Lines */
+  .neural-lines {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .neural-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--quantum-blue))/0.4,
+      transparent
+    );
+    animation: neural-sweep 3s infinite;
+  }
+  
+  /* Holographic Text */
+  .holo-text {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--quantum-blue)),
+      hsl(var(--cyber-teal)),
+      hsl(var(--neural-orange)),
+      hsl(var(--matrix-green))
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: holo-shift 4s ease-in-out infinite;
+  }
+  
+  /* Levitation Effect */
+  .levitate {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  
+  .levitate:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Magnetic Pull */
+  .magnetic {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  
+  /* Particle System */
+  .particle-field {
+    position: relative;
+    overflow: hidden;
   }
   
   .particle {
     position: absolute;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.8) 0%, transparent 70%);
+    width: 2px;
+    height: 2px;
+    background: hsl(var(--quantum-blue));
     border-radius: 50%;
     pointer-events: none;
+    opacity: 0.6;
+  }
+  
+  /* Hexagonal Grid */
+  .hex-grid {
+    background-image: 
+      radial-gradient(circle at 25px 25px, hsl(var(--quantum-blue))/0.1 2px, transparent 2px),
+      radial-gradient(circle at 75px 75px, hsl(var(--cyber-teal))/0.1 2px, transparent 2px);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
   }
 }
 
-/* Custom scrollbar */
+/* Revolutionary Animations */
+@keyframes neural-sweep {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+@keyframes holo-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes quantum-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(var(--quantum-blue))/0.3;
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px hsl(var(--quantum-blue))/0.6;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes orbital {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes morphic-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    border-radius: 20% 80% 30% 70%;
+  }
+  25% { 
+    transform: translateY(-20px) rotate(90deg);
+    border-radius: 70% 30% 80% 20%;
+  }
+  50% { 
+    transform: translateY(-10px) rotate(180deg);
+    border-radius: 30% 70% 20% 80%;
+  }
+  75% { 
+    transform: translateY(-30px) rotate(270deg);
+    border-radius: 80% 20% 70% 30%;
+  }
+}
+
+@keyframes data-stream {
+  0% { 
+    transform: translateX(-100px) translateY(0px);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { 
+    transform: translateX(calc(100vw + 100px)) translateY(-50px);
+    opacity: 0;
+  }
+}
+
+/* Custom Scrollbar - Futuristic */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: hsl(var(--surface-white));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #06b6d4, #9333ea);
-  border-radius: 4px;
+  background: linear-gradient(
+    45deg, 
+    hsl(var(--quantum-blue)), 
+    hsl(var(--cyber-teal))
+  );
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #0891b2, #7c3aed);
+  background: linear-gradient(
+    45deg, 
+    hsl(var(--quantum-blue-dark)), 
+    hsl(var(--cyber-teal-dark))
+  );
 }
