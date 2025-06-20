@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -56,70 +57,36 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Revolutionary Color System
-				quantum: {
-					50: 'hsl(199, 89%, 95%)',
-					100: 'hsl(199, 89%, 85%)',
-					200: 'hsl(199, 89%, 75%)',
-					300: 'hsl(199, 89%, 65%)',
-					400: 'hsl(199, 89%, 55%)',
-					500: 'hsl(var(--quantum-blue))',
-					600: 'hsl(var(--quantum-blue-dark))',
-					700: 'hsl(199, 89%, 25%)',
-					800: 'hsl(199, 89%, 15%)',
-					900: 'hsl(199, 89%, 8%)',
+				// Sophisticated Black & White System
+				mono: {
+					50: 'hsl(0, 0%, 98%)',
+					100: 'hsl(0, 0%, 95%)',
+					200: 'hsl(0, 0%, 88%)',
+					300: 'hsl(0, 0%, 78%)',
+					400: 'hsl(0, 0%, 65%)',
+					500: 'hsl(0, 0%, 50%)',
+					600: 'hsl(0, 0%, 35%)',
+					700: 'hsl(0, 0%, 22%)',
+					800: 'hsl(0, 0%, 12%)',
+					900: 'hsl(0, 0%, 5%)',
 				},
-				cyber: {
-					50: 'hsl(174, 72%, 95%)',
-					100: 'hsl(174, 72%, 85%)',
-					200: 'hsl(174, 72%, 75%)',
-					300: 'hsl(174, 72%, 65%)',
-					400: 'hsl(174, 72%, 55%)',
-					500: 'hsl(var(--cyber-teal))',
-					600: 'hsl(var(--cyber-teal-dark))',
-					700: 'hsl(174, 72%, 32%)',
-					800: 'hsl(174, 72%, 22%)',
-					900: 'hsl(174, 72%, 12%)',
-				},
-				neural: {
-					50: 'hsl(24, 95%, 95%)',
-					100: 'hsl(24, 95%, 85%)',
-					200: 'hsl(24, 95%, 75%)',
-					300: 'hsl(24, 95%, 65%)',
-					400: 'hsl(24, 95%, 55%)',
-					500: 'hsl(var(--neural-orange))',
-					600: 'hsl(var(--neural-orange-dark))',
-					700: 'hsl(24, 95%, 29%)',
-					800: 'hsl(24, 95%, 19%)',
-					900: 'hsl(24, 95%, 9%)',
-				},
-				matrix: {
-					50: 'hsl(142, 76%, 95%)',
-					100: 'hsl(142, 76%, 85%)',
-					200: 'hsl(142, 76%, 75%)',
-					300: 'hsl(142, 76%, 65%)',
-					400: 'hsl(142, 76%, 55%)',
-					500: 'hsl(var(--matrix-green))',
-					600: 'hsl(var(--matrix-green-dark))',
-					700: 'hsl(142, 76%, 16%)',
-					800: 'hsl(142, 76%, 11%)',
-					900: 'hsl(142, 76%, 6%)',
-				},
-				void: {
-					50: 'hsl(210, 6%, 95%)',
-					100: 'hsl(210, 6%, 85%)',
-					200: 'hsl(210, 6%, 75%)',
-					300: 'hsl(210, 6%, 65%)',
-					400: 'hsl(210, 6%, 55%)',
-					500: 'hsl(210, 6%, 45%)',
-					600: 'hsl(210, 6%, 35%)',
-					700: 'hsl(210, 6%, 25%)',
-					800: 'hsl(var(--void-gray-light))',
-					900: 'hsl(var(--void-gray))',
+				subtle: {
+					50: 'hsl(210, 8%, 98%)',
+					100: 'hsl(210, 8%, 95%)',
+					200: 'hsl(210, 8%, 88%)',
+					300: 'hsl(210, 8%, 78%)',
+					400: 'hsl(210, 8%, 65%)',
+					500: 'hsl(210, 8%, 50%)',
+					600: 'hsl(210, 8%, 35%)',
+					700: 'hsl(210, 8%, 22%)',
+					800: 'hsl(210, 8%, 12%)',
+					900: 'hsl(210, 8%, 5%)',
 				},
 				surface: {
-					white: 'hsl(var(--surface-white))',
-					cream: 'hsl(var(--surface-cream))',
+					white: 'hsl(0, 0%, 100%)',
+					cream: 'hsl(0, 0%, 98%)',
+					light: 'hsl(0, 0%, 95%)',
+					dark: 'hsl(0, 0%, 8%)',
 				}
 			},
 			borderRadius: {
@@ -144,23 +111,23 @@ export default {
 						height: '0'
 					}
 				},
-				// Revolutionary Animations
-				'quantum-pulse': {
+				// Monochromatic Animations
+				'mono-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--quantum-blue) / 0.3)',
+						boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
 						transform: 'scale(1)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(var(--quantum-blue) / 0.6)',
+						boxShadow: '0 0 40px rgba(0, 0, 0, 0.2)',
 						transform: 'scale(1.02)'
 					}
 				},
-				'neural-sweep': {
+				'gradient-sweep': {
 					'0%': { left: '-100%' },
 					'50%': { left: '100%' },
 					'100%': { left: '100%' }
 				},
-				'holo-shift': {
+				'mono-shift': {
 					'0%, 100%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' }
 				},
@@ -202,32 +169,32 @@ export default {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-10px)' }
 				},
-				'glow-pulse': {
+				'subtle-glow': {
 					'0%, 100%': { 
-						boxShadow: '0 0 20px hsl(var(--cyber-teal) / 0.4)' 
+						boxShadow: '0 0 20px rgba(0, 0, 0, 0.05)' 
 					},
 					'50%': { 
-						boxShadow: '0 0 40px hsl(var(--cyber-teal) / 0.8)' 
+						boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)' 
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				// Revolutionary Animations
-				'quantum-pulse': 'quantum-pulse 2s ease-in-out infinite',
-				'neural-sweep': 'neural-sweep 3s infinite',
-				'holo-shift': 'holo-shift 4s ease-in-out infinite',
+				// Monochromatic Animations
+				'mono-pulse': 'mono-pulse 2s ease-in-out infinite',
+				'gradient-sweep': 'gradient-sweep 3s infinite',
+				'mono-shift': 'mono-shift 4s ease-in-out infinite',
 				'orbital': 'orbital 20s linear infinite',
 				'morphic-float': 'morphic-float 8s ease-in-out infinite',
 				'data-stream': 'data-stream 4s linear infinite',
 				'levitate': 'levitate 3s ease-in-out infinite',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite alternate',
+				'subtle-glow': 'subtle-glow 2s ease-in-out infinite alternate',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'quantum-mesh': 'radial-gradient(circle at 25px 25px, hsl(var(--quantum-blue) / 0.1) 2px, transparent 2px), radial-gradient(circle at 75px 75px, hsl(var(--cyber-teal) / 0.1) 2px, transparent 2px)',
+				'mono-mesh': 'radial-gradient(circle at 25px 25px, rgba(0, 0, 0, 0.02) 2px, transparent 2px), radial-gradient(circle at 75px 75px, rgba(0, 0, 0, 0.01) 2px, transparent 2px)',
 			}
 		}
 	},

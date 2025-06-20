@@ -33,25 +33,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden hex-grid">
+    <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden mono-grid texture">
       {/* Dynamic Background Effects */}
       <div 
-        className="absolute inset-0 opacity-30 transition-all duration-1000 ease-out"
+        className="absolute inset-0 opacity-20 transition-all duration-1000 ease-out"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, hsl(var(--quantum-blue))/0.1 0%, transparent 50%)`
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 0.05) 0%, transparent 50%)`
         }}
       />
       
       {/* Floating Morphic Shapes */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-quantum-400/20 to-cyber-400/20 animate-morphic-float" />
-      <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-bl from-neural-400/20 to-matrix-400/20 animate-morphic-float" style={{ animationDelay: '-2s' }} />
-      <div className="absolute top-1/2 left-10 w-16 h-16 bg-gradient-to-tr from-cyber-400/20 to-quantum-400/20 animate-morphic-float" style={{ animationDelay: '-4s' }} />
+      <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-mono-200/30 to-mono-300/20 animate-morphic-float" />
+      <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-bl from-mono-300/20 to-mono-400/15 animate-morphic-float" style={{ animationDelay: '-2s' }} />
+      <div className="absolute top-1/2 left-10 w-16 h-16 bg-gradient-to-tr from-mono-200/25 to-mono-300/20 animate-morphic-float" style={{ animationDelay: '-4s' }} />
 
       {/* Data Streams */}
       {dataStreams.map((stream) => (
         <div
           key={stream.id}
-          className="absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-quantum-400/50 to-transparent animate-data-stream"
+          className="absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-mono-400/30 to-transparent animate-data-stream"
           style={{ 
             left: `${10 + stream.id * 10}%`,
             animationDelay: `${stream.delay}s`
@@ -61,50 +61,50 @@ const Hero = () => {
 
       {/* Orbital Elements */}
       <div className="absolute inset-0 animate-orbital">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-quantum-400 rounded-full" />
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-cyber-400 rounded-full" />
-        <div className="absolute bottom-1/4 left-3/4 w-1.5 h-1.5 bg-neural-400 rounded-full" />
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-mono-600 rounded-full" />
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-mono-500 rounded-full" />
+        <div className="absolute bottom-1/4 left-3/4 w-1.5 h-1.5 bg-mono-700 rounded-full" />
       </div>
 
       {/* Main Content */}
       <div className="relative z-20 text-center px-6 max-w-6xl mx-auto">
-        {/* Revolutionary Badge */}
+        {/* Sophisticated Badge */}
         <div className="mb-8 animate-levitate">
-          <Badge className="neo-glass border-quantum-200/50 text-quantum-700 px-6 py-3 text-sm font-medium">
+          <Badge className="mono-glass border-mono-300/50 text-mono-800 px-6 py-3 text-sm font-medium">
             <Sparkles className="w-4 h-4 mr-2" />
             Next-Generation Digital Innovation
           </Badge>
         </div>
 
-        {/* Holographic Title */}
+        {/* Monochromatic Title */}
         <h1 className="text-7xl md:text-9xl font-bold mb-8 leading-tight">
-          <span className="holo-text">Digital Mind</span>
+          <span className="mono-text">Digital Mind</span>
           <br />
-          <span className="text-void-900 neural-lines">Studio</span>
+          <span className="text-mono-900 gradient-lines">Studio</span>
         </h1>
 
-        {/* Revolutionary Subtitle */}
-        <p className="text-xl md:text-2xl text-void-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-          Where quantum creativity intersects with neural intelligence. 
-          We architect digital realities that transcend conventional boundaries and 
+        {/* Sophisticated Subtitle */}
+        <p className="text-xl md:text-2xl text-mono-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+          Where sophisticated creativity intersects with intelligent design. 
+          We architect digital experiences that transcend conventional boundaries and 
           redefine the future of human-computer interaction.
         </p>
 
-        {/* Quantum Action Buttons */}
+        {/* Monochromatic Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
           <Button 
             size="lg" 
-            className="quantum-glow bg-gradient-to-r from-quantum-500 to-cyber-500 hover:from-quantum-600 hover:to-cyber-600 text-white border-0 px-10 py-4 text-lg font-semibold levitate group relative overflow-hidden"
+            className="mono-glow bg-gradient-to-r from-mono-800 to-mono-900 hover:from-mono-900 hover:to-mono-800 text-white border-0 px-10 py-4 text-lg font-semibold levitate group relative overflow-hidden"
           >
             <span className="relative z-10">Explore the Future</span>
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
-            <div className="absolute inset-0 bg-gradient-to-r from-cyber-500 to-quantum-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-mono-700 to-mono-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Button>
           
           <Button 
             variant="outline" 
             size="lg" 
-            className="neo-glass border-quantum-300/50 text-void-700 hover:bg-quantum-50/50 px-10 py-4 text-lg font-semibold levitate neural-lines"
+            className="mono-glass border-mono-400/50 text-mono-800 hover:bg-mono-100/50 px-10 py-4 text-lg font-semibold levitate gradient-lines"
           >
             Start Your Journey
           </Button>
@@ -113,34 +113,34 @@ const Hero = () => {
         {/* Innovation Indicators */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center group magnetic">
-            <div className="w-20 h-20 mx-auto mb-4 neo-glass rounded-2xl flex items-center justify-center group-hover:animate-quantum-pulse transition-all duration-300 bg-gradient-to-br from-quantum-100 to-quantum-50">
-              <Cpu className="w-10 h-10 text-quantum-600" />
+            <div className="w-20 h-20 mx-auto mb-4 mono-glass rounded-2xl flex items-center justify-center group-hover:animate-mono-pulse transition-all duration-300 bg-gradient-to-br from-mono-100 to-mono-50">
+              <Cpu className="w-10 h-10 text-mono-700" />
             </div>
-            <h3 className="text-lg font-semibold text-void-800 mb-2">Neural Architecture</h3>
-            <p className="text-void-600 text-sm">AI-driven design intelligence</p>
+            <h3 className="text-lg font-semibold text-mono-900 mb-2">Neural Architecture</h3>
+            <p className="text-mono-600 text-sm">AI-driven design intelligence</p>
           </div>
           
           <div className="text-center group magnetic">
-            <div className="w-20 h-20 mx-auto mb-4 neo-glass rounded-2xl flex items-center justify-center group-hover:animate-glow-pulse transition-all duration-300 bg-gradient-to-br from-cyber-100 to-cyber-50">
-              <Globe className="w-10 h-10 text-cyber-600" />
+            <div className="w-20 h-20 mx-auto mb-4 mono-glass rounded-2xl flex items-center justify-center group-hover:animate-subtle-glow transition-all duration-300 bg-gradient-to-br from-mono-100 to-mono-50">
+              <Globe className="w-10 h-10 text-mono-700" />
             </div>
-            <h3 className="text-lg font-semibold text-void-800 mb-2">Quantum Reach</h3>
-            <p className="text-void-600 text-sm">Global digital ecosystems</p>
+            <h3 className="text-lg font-semibold text-mono-900 mb-2">Global Reach</h3>
+            <p className="text-mono-600 text-sm">Worldwide digital ecosystems</p>
           </div>
           
           <div className="text-center group magnetic">
-            <div className="w-20 h-20 mx-auto mb-4 neo-glass rounded-2xl flex items-center justify-center group-hover:animate-quantum-pulse transition-all duration-300 bg-gradient-to-br from-neural-100 to-neural-50">
-              <Zap className="w-10 h-10 text-neural-600" />
+            <div className="w-20 h-20 mx-auto mb-4 mono-glass rounded-2xl flex items-center justify-center group-hover:animate-mono-pulse transition-all duration-300 bg-gradient-to-br from-mono-100 to-mono-50">
+              <Zap className="w-10 h-10 text-mono-700" />
             </div>
-            <h3 className="text-lg font-semibold text-void-800 mb-2">Instant Evolution</h3>
-            <p className="text-void-600 text-sm">Real-time adaptive systems</p>
+            <h3 className="text-lg font-semibold text-mono-900 mb-2">Instant Evolution</h3>
+            <p className="text-mono-600 text-sm">Real-time adaptive systems</p>
           </div>
         </div>
       </div>
 
       {/* Background Grid Animation */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-quantum-mesh bg-[length:100px_100px] animate-neural-sweep" />
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-mono-mesh bg-[length:100px_100px] animate-gradient-sweep" />
       </div>
     </div>
   );
